@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "CSSManager",
+    "version": "1.0",
+    "description": "Inspect, edit, save and load custom CSS.",
+    "icons": {
+      "48": "icons/icon.png"
+    },
+  
+    "permissions": ["activeTab", "storage"],
+
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "css": ["content_scripts/content.css"],
+          "js": ["content_scripts/content.js"]
+        }
+    ],
+    "browser_action": {
+      "default_icon": "icons/icon-32.png",
+      "default_title": "CSSManager",
+      "default_popup": "popup/index.html"
+    }
+}
+  
